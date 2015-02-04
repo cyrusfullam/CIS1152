@@ -24,6 +24,7 @@ define('GRAVITY', 9.8);
 function truncateFloat($float_value)
 {
 
+
 }
 
 /**
@@ -31,7 +32,9 @@ function truncateFloat($float_value)
  */
 function farenheit2Kelvin($degrees_f)
 {
-
+$Tk = 0;
+$Tf = 30;
+[ $Tk=($Tf-32) * \frac{5}{9} + 273.15\\]
 }
 
 /**
