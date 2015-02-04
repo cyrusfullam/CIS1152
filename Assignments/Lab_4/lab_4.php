@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Lab 2, Arithmatic Lab
+ * Lab 4, Form and Post Lab
  *
  * This lab focuses on your understanding of arithmatic.
  *
@@ -24,7 +24,6 @@ define('GRAVITY', 9.8);
 function truncateFloat($float_value)
 {
 
-
 }
 
 /**
@@ -32,9 +31,7 @@ function truncateFloat($float_value)
  */
 function farenheit2Kelvin($degrees_f)
 {
-$Tk = 0;
-$Tf = 30;
-[ $Tk=($Tf-32) * \frac{5}{9} + 273.15\\]
+
 }
 
 /**
@@ -52,3 +49,15 @@ function impactVelocity($height)
 {
 
 }
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class 4 Lab</title>
+</head>
+<body>
+
+</body>
+</html>
