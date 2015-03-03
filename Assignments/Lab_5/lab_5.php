@@ -1,8 +1,9 @@
 <?php
 define('gravity',9.8);
+$header = <<< EOD
 <html>
 <head>
-<tile>Simple PHP Form Example</title>
+<title>Simple PHP Form Example</title>
 </head>
 <body>
 EOD;
@@ -16,10 +17,10 @@ $form_layout = <<< EOD
 <p>
 <form method="post" action="">
 <label name="truncateFloat"> Floating Point Value</label><input type="text" name ="truncateFloat"><br>
-<label name="farenheit2Kelven"> Farenheit Value</label><input type="text" name ="farenheit2Kelven"><br>
+<label name="farenheit2Kelven"> Fahrenheit Value</label><input type="text" name ="farenheit2Kelven"><br>
 <label name="dodecahedronVolume"> dodecahedron Side Volume</label><input type="text" name ="dodecahedronVolume"><br>
 <label name="impactVelocity"> Height of fall Value</label><input type="text" name ="impactVelocity"><br>
-<input type="submit" value="submit" name "submit">
+<input type="submit" value="submit" name="submit">
 </form>
 </p>
 EOD;
@@ -33,7 +34,7 @@ function truncateFloat($float_value)
 */
 function farenheit2Kelven($degrees_f)
 {
-	return ($degrees_f - 32) * 5 /9 + 273.15:
+	return ($degrees_f - 32) * 5 /9 + 273.15;
 }
 /**
 *@param $area
@@ -47,14 +48,14 @@ function dodecahedronVolume($area)
 */
 function impactVelocity($height)
 {
-	return sqrt(2 * GRAVITY * $height)
+	return sqrt(2 * gravity * $height);
 }
 
-if(!isset ($_POST['submit'])) {
-	$truncateFloatResult =truncateFloat($_POST["truncateFloat"]);
-	$farenheit2KelvenResult =farenheit2Kelven($_POST["farenheit2Kelven"]);
-	$dodecahedronVolumeResult = dodecahedronVolume($_POST[dodecahedronVolume]);
-	$impactVelocityResults = impactVelocity($_POST["impactVelocity"]);
+if(isset ($_POST['submit'])) {
+	$truncateFloatResult = truncateFloat($_POST['truncateFloat']);
+	$farenheit2KelvenResult = farenheit2Kelven($_POST['farenheit2Kelven']);
+	$dodecahedronVolumeResult = dodecahedronVolume($_POST['dodecahedronVolume']);
+	$impactVelocityResults = impactVelocity($_POST['impactVelocity']);
 }else {
 $truncateFloatResult = "";
 $farenheit2KelvenResults = "";
@@ -62,7 +63,7 @@ $dodecahedronVolumeResults = "";
 $impactVelocityResults = "";
 }
 if (!isset($_POST['submit'])) {
-	//dsplay the form
+	//display the form
 	echo $form_layout;
 }else{
 	$form_results = $header;
@@ -75,11 +76,12 @@ if (!isset($_POST['submit'])) {
 	if (!empty($dodecahedronVolumeResult)) {
 		$form_results .= "The dodecahedron volume is: " . $dodecahedronVolumeResult . "<br>";
 }
-	if (!empty($impactVelocityResult)) {
-		$form_results .= "The splat value is: " . $impactVelocityResult . "<br>";
+	if (!empty($impactVelocityResults)) {
+		$form_results .= "The splat value is: " . $impactVelocityResults . "<br>";
 }
-$form_results.= $footer;
+$form_results .= $footer;
 echo $form_results;
 }
+
 ?>
 
