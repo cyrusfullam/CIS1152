@@ -6,7 +6,7 @@
  * This lab focuses on your understanding of arithmatic.
  *
  * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edu>
+ * @author YOUR_NAME <cmf08270@vtc.edu>
  * @since 20150120
  */
 
@@ -41,7 +41,7 @@ $kelvin = ($degrees_f + 459.67)× 5/9;
  */
 function dodecahedronVolume($area)
 {
-
+ echo pow($area, 3) / 4 * (15 + 7 * sqrt(5));
 }
 
 /**

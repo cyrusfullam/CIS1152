@@ -52,7 +52,7 @@ function quadraticEquation($a, $b, $c)
  * This lab focuses on your understanding of arithmatic.
  *
  * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edu>
+ * @author YOUR_NAME <cmf08270@vtc.edu>
  * @since 20150120
  */
 
@@ -112,7 +112,8 @@ function indefiniteFactorialLoop($count)
 	}
 
 }
-
+?>
+<?php
 // Insert function calls below.
 tempWarning(20);
 quadraticEquation(1, 2, 6);
@@ -120,3 +121,4 @@ consinantOrVowel(a);
 oddOrEven(34);
 countByThree();
 indefiniteFactorialLoop(10);
+?>
