@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Lab 2, Arithmatic Lab
+ * Lab 2, Arithmetic Lab
  *
- * This lab focuses on your understanding of arithmatic.
+ * This lab focuses on your understanding of arithmetic.
  *
  * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edu>
+ * @author YOUR_NAME <cmf08270@vtc.edu>
  * @since 20150120
  */
 
@@ -56,3 +56,4 @@ class MathFun
         return sqrt(2 * GRAVITY * $height);
     }
 }
+?>
